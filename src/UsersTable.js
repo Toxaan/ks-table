@@ -46,8 +46,6 @@ class Users extends React.Component {
             data
         } = this.state;
 
-        console.log(this.state);
-
         return <div>
             <Table onRow={(record, rowIndex) => {
                 return {
@@ -66,7 +64,6 @@ class Users extends React.Component {
 
 
 const mapStateToProps = state => {
-    //console.log(state.modal.blockUserId);
     return {
         blockUser: state.modal.blockUserId
     }

@@ -6,7 +6,7 @@ import {CHANGE_MODAL_VISIBLE, BLOCKUSER} from './action-types'
 const initialState = {
     visible: false,
     content: null,
-    blockUserId: [1,2,5]
+    blockUserId: []
 }
 
 export const modal = (state = initialState, action) => {
@@ -19,8 +19,7 @@ export const modal = (state = initialState, action) => {
                 content: action.content
             };
         case BLOCKUSER:
-            var old = state.blockUserId;
-            old.push(action.blockUserId);
+            var old = state.blockUserId.concat(action.blockUserId);
             return {
                 ...state, 
                 blockUserId: old, 

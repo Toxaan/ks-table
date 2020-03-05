@@ -36,6 +36,7 @@ class Modal extends React.Component {
             >
                 {this.renderContent(content)}
                 <BlockUser blockUser={blockUser} content={content} />
+                
             </AntdModal>)
     }
 }
